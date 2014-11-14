@@ -31,7 +31,7 @@ public class ToImageSampleConversion extends SampleConverter{
         imageSaveOptions.setPage(page);
         //Optional parameters
         imageSaveOptions.setSaveName("custom_name");
-        imageSaveOptions.setSavePath(config.getFileSavePath() + "1-onePageForEachFile-IMG/");
+        imageSaveOptions.setSavePath(config.getFileSavePath() + "1-OnePageForEachFile-IMG/");
 //        imageSaveOptions.setWidth(600);
 //        imageSaveOptions.setHeight(800);
         
