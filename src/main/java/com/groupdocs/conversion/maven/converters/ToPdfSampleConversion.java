@@ -1,6 +1,7 @@
 package com.groupdocs.conversion.maven.converters;
 
 import com.groupdocs.conversion.converter.options.PdfSaveOptions;
+import com.groupdocs.conversion.domain.WordBookmarks;
 import com.groupdocs.conversion.handler.ConversionHandler;
 import com.groupdocs.conversion.maven.config.Config;
 import java.io.OutputStream;
@@ -82,6 +83,8 @@ public class ToPdfSampleConversion extends SampleConverter{
         //Optional parameters
         pdfSaveOptions.setSaveName("custom_name");
         pdfSaveOptions.setSavePath(config.getFileSavePath() + "4-WholeFileConversion-PDF/");
+        //Create bookmarks from Word documents
+        pdfSaveOptions.setWordBookmarks(WordBookmarks.HEADINGS);
         
         System.out.println("PDF");
         String savedPath = conversionHandler.convertToPdf(PDF_FILE, pdfSaveOptions);
