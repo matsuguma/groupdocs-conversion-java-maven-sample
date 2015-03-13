@@ -1,5 +1,6 @@
 package com.groupdocs.conversion.maven.converters;
 
+import com.groupdocs.conversion.maven.domain.SampleVariables;
 import com.groupdocs.conversion.converter.options.ImageSaveOptions;
 import com.groupdocs.conversion.handler.ConversionHandler;
 import com.groupdocs.conversion.maven.config.Config;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Alex Bobkov
  */
-public class ToImageSampleConversion extends SampleConverter{
+public class ToImageSampleConversion extends SampleVariables{
     
     public ToImageSampleConversion(Config config){
         super(config);
@@ -85,7 +86,6 @@ public class ToImageSampleConversion extends SampleConverter{
         ImageSaveOptions imageSaveOptions = new ImageSaveOptions();
         imageSaveOptions.setSaveFileType(ImageSaveOptions.PNG);
         imageSaveOptions.setPage(page);
-        imageSaveOptions.setSaveToStream(true);
         
         OutputStream outputStream = conversionHandler.convertToImage(PDF_FILE, imageSaveOptions);
         //do something with the stream
@@ -188,8 +188,6 @@ public class ToImageSampleConversion extends SampleConverter{
     public void convertToListStreams(ConversionHandler conversionHandler){
         ImageSaveOptions imageSaveOptions = new ImageSaveOptions();
         imageSaveOptions.setSaveFileType(ImageSaveOptions.PNG);
-        imageSaveOptions.setSaveName("custom_name");
-        imageSaveOptions.setSaveToStream(true);
         
         ArrayList<OutputStream> list = conversionHandler.convertToImage(PDF_FILE, imageSaveOptions);
         int i = 0;

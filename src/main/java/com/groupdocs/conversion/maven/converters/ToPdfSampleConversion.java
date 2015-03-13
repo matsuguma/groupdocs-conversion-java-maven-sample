@@ -1,5 +1,6 @@
 package com.groupdocs.conversion.maven.converters;
 
+import com.groupdocs.conversion.maven.domain.SampleVariables;
 import com.groupdocs.conversion.converter.options.PdfSaveOptions;
 import com.groupdocs.conversion.domain.WordBookmarks;
 import com.groupdocs.conversion.handler.ConversionHandler;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author Alex Bobkov
  */
-public class ToPdfSampleConversion extends SampleConverter{
+public class ToPdfSampleConversion extends SampleVariables{
 
     public ToPdfSampleConversion(Config config) {
         super(config);
@@ -70,7 +71,7 @@ public class ToPdfSampleConversion extends SampleConverter{
     }
     
     /**
-     * Convert 1 document page to pdf<br>
+     * Convert whole document to pdf<br>
      * On this type of conversion convertToImage returns String with file location - path<br>
      * To use this type of conversion 'page' parameter must be set in ImageSaveOptions<br>
      * convertToImage method also can receive InputStream as parameter<br>
@@ -79,7 +80,6 @@ public class ToPdfSampleConversion extends SampleConverter{
      */
     public void convertToFile(ConversionHandler conversionHandler){
         PdfSaveOptions pdfSaveOptions = new PdfSaveOptions();
-        pdfSaveOptions.setOneFileOutput(true);
         //Optional parameters
         pdfSaveOptions.setSaveName("custom_name");
         pdfSaveOptions.setSavePath(config.getFileSavePath() + "4-WholeFileConversion-PDF/");
@@ -132,6 +132,7 @@ public class ToPdfSampleConversion extends SampleConverter{
      */
     public void convertToFiles(ConversionHandler conversionHandler){
         PdfSaveOptions pdfSaveOptions = new PdfSaveOptions();
+        pdfSaveOptions.setSplitIntoPages(true);
         //Optional parameters
         pdfSaveOptions.setSaveName("custom_name");
         pdfSaveOptions.setSavePath(config.getFileSavePath() + "5-AllPagesFromEachFiles-PDF/");
@@ -195,7 +196,6 @@ public class ToPdfSampleConversion extends SampleConverter{
     public void convertToStream(ConversionHandler conversionHandler, int page){
         PdfSaveOptions pdfSaveOptions = new PdfSaveOptions();
         pdfSaveOptions.setPage(page);
-        pdfSaveOptions.setSaveToStream(true);
         
         OutputStream outputStream = conversionHandler.convertToPdf(PDF_FILE, pdfSaveOptions);
         //do something with the stream
@@ -230,7 +230,6 @@ public class ToPdfSampleConversion extends SampleConverter{
      */
     public void convertToListStreams(ConversionHandler conversionHandler){
         PdfSaveOptions pdfSaveOptions = new PdfSaveOptions();
-        pdfSaveOptions.setSaveToStream(true);
         
         ArrayList<OutputStream> list = conversionHandler.convertToPdf(PDF_FILE, pdfSaveOptions);
         int i = 0;

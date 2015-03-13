@@ -4,6 +4,7 @@ import com.groupdocs.conversion.handler.ConversionHandler;
 import com.groupdocs.conversion.maven.config.Config;
 import com.groupdocs.conversion.maven.converters.ToImageSampleConversion;
 import com.groupdocs.conversion.maven.converters.ToPdfSampleConversion;
+import com.groupdocs.conversion.maven.merge.ToPdfMerge;
 
 /**
  *
@@ -29,6 +30,8 @@ public class ConversionSample {
 //        toPdf.convertToStream(conversionHandler, 1);
 //        toPdf.convertToListStreams(conversionHandler);
         
+        ToPdfMerge toPdfMerge = new ToPdfMerge(config);
+        toPdfMerge.mergeToFile(conversionHandler);
     }
     
 }

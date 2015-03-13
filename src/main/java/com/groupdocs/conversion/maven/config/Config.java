@@ -1,12 +1,12 @@
 package com.groupdocs.conversion.maven.config;
 
-import com.groupdocs.conversion.config.ConversionConfig;
+import com.groupdocs.conversion.config.IConfig;
 
 /**
  *
  * @author Alex Bobkov
  */
-public class Config implements ConversionConfig{
+public class Config implements IConfig{
     private final String licensePath = null;
     private final String savePath = "D:/Projects/GroupDocs/Apps/xFiles/converted/";
 
