@@ -50,7 +50,7 @@ public class ToPdfSampleConversion extends SampleVariables{
         System.out.println("");
         
         System.out.println("POWERPOINT");
-        savedPath = conversionHandler.convertToPdf(PP_FILE, pdfSaveOptions);
+        savedPath = conversionHandler.convertToPdf(PPT_FILE, pdfSaveOptions);
         System.out.println(savedPath);
         System.out.println("");
         
@@ -102,7 +102,7 @@ public class ToPdfSampleConversion extends SampleVariables{
         System.out.println("");
         
         System.out.println("POWERPOINT");
-        savedPath = conversionHandler.convertToPdf(PP_FILE, pdfSaveOptions);
+        savedPath = conversionHandler.convertToPdf(PPT_FILE, pdfSaveOptions);
         System.out.println(savedPath);
         System.out.println("");
         
@@ -159,8 +159,8 @@ public class ToPdfSampleConversion extends SampleVariables{
         }
         System.out.println();
         
-        System.out.println("POWERPOINT (page_size=" + conversionHandler.getPageCount(PP_FILE) + ")");
-        list = conversionHandler.convertToPdf(PP_FILE, pdfSaveOptions);
+        System.out.println("POWERPOINT (page_size=" + conversionHandler.getPageCount(PPT_FILE) + ")");
+        list = conversionHandler.convertToPdf(PPT_FILE, pdfSaveOptions);
         for(String item : list){
             System.out.println(item);
         }
@@ -206,7 +206,7 @@ public class ToPdfSampleConversion extends SampleVariables{
         outputStream = conversionHandler.convertToPdf(EXCEL_FILE, pdfSaveOptions);
         //do something with the stream
         
-        outputStream = conversionHandler.convertToPdf(PP_FILE, pdfSaveOptions);
+        outputStream = conversionHandler.convertToPdf(PPT_FILE, pdfSaveOptions);
         //do something with the stream
         
         outputStream = conversionHandler.convertToPdf(DIAGRAM_FILE, pdfSaveOptions);
@@ -249,7 +249,7 @@ public class ToPdfSampleConversion extends SampleVariables{
             System.out.println("item " + i++);
         }
         
-        list = conversionHandler.convertToPdf(PP_FILE, pdfSaveOptions);
+        list = conversionHandler.convertToPdf(PPT_FILE, pdfSaveOptions);
         i = 0;
         for(OutputStream item : list){
             System.out.println("item " + i++);

@@ -52,7 +52,7 @@ public class ToImageSampleConversion extends SampleVariables{
         System.out.println("");
         
         System.out.println("POWERPOINT");
-        savedPath = conversionHandler.convertToImage(PP_FILE, imageSaveOptions);
+        savedPath = conversionHandler.convertToImage(PPT_FILE, imageSaveOptions);
         System.out.println(savedPath);
         System.out.println("");
         
@@ -96,7 +96,7 @@ public class ToImageSampleConversion extends SampleVariables{
         outputStream = conversionHandler.convertToImage(EXCEL_FILE, imageSaveOptions);
         //do something with the stream
         
-        outputStream = conversionHandler.convertToImage(PP_FILE, imageSaveOptions);
+        outputStream = conversionHandler.convertToImage(PPT_FILE, imageSaveOptions);
         //do something with the stream
         
         outputStream = conversionHandler.convertToImage(DIAGRAM_FILE, imageSaveOptions);
@@ -147,8 +147,8 @@ public class ToImageSampleConversion extends SampleVariables{
         }
         System.out.println();
         
-        System.out.println("POWERPOINT (page_size=" + conversionHandler.getPageCount(PP_FILE) + ")");
-        list = conversionHandler.convertToImage(PP_FILE, imageSaveOptions);
+        System.out.println("POWERPOINT (page_size=" + conversionHandler.getPageCount(PPT_FILE) + ")");
+        list = conversionHandler.convertToImage(PPT_FILE, imageSaveOptions);
         for(String item : list){
             System.out.println(item);
         }
@@ -207,7 +207,7 @@ public class ToImageSampleConversion extends SampleVariables{
             System.out.println("item " + i++);
         }
         
-        list = conversionHandler.convertToImage(PP_FILE, imageSaveOptions);
+        list = conversionHandler.convertToImage(PPT_FILE, imageSaveOptions);
         i = 0;
         for(OutputStream item : list){
             System.out.println("item " + i++);

@@ -13,7 +13,7 @@ import com.groupdocs.conversion.maven.merge.ToPdfMerge;
 public class ConversionSample {
     
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Config config = new Config();
         ConversionHandler conversionHandler = new ConversionHandler(config);
         
