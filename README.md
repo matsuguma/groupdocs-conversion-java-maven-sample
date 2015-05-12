@@ -1,5 +1,5 @@
 ##GroupDocs.Conversion for Java
-####Maven Sample 1.1.0
+####Maven Sample 1.2.0
 ![Alt text](https://media.licdn.com/media/p/7/005/059/258/39b2da3.png "GroupDocs")
 
 <br/><br/>
